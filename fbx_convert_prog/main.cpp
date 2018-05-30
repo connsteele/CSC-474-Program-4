@@ -543,7 +543,7 @@ public:
 		M = TransZ * S;
 		glUniformMatrix4fv(boneprog->getUniform("M"), 1, GL_FALSE, &M[0][0]);
 		glUniformMatrix4fv(boneprog->getUniform("Manim"), 200, GL_FALSE, &animmat[0][0][0]);
-		glDrawArrays(GL_LINES, 4, size_stick-4);
+		glDrawArrays(GL_LINES, 8, size_stick-8); //was 4 and -4 but that renders a tail connected to the origin
 		glBindVertexArray(0);		
 		boneprog->unbind();
 
