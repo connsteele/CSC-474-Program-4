@@ -447,8 +447,10 @@ public:
 				totaltime_untilframe_ms = 0;
 				frame++;
 			}
-		//root->play_animation(frame, "Clip_Walk_Cycle");	//name of anmiation from the .fbx file, shown in console. Play the first animation that is loaded in the bones
-		root->play_animation(frame, "Clip_Run_Left_45Deg_Cycle");  //play anim2 that is loaded in the bones
+		float t = 0;
+		//root->play_animation(frame, "Clip_Walk_Cycle", t);	//name of anmiation from the .fbx file, shown in console. Play the first animation that is loaded in the bones
+		//root->play_animation(frame, "Clip_Run_Left_45Deg_Cycle", t);  //play anim2 that is loaded in the bones
+		root->myplayanim(frame, "Clip_Walk_Cycle", "Clip_Run_Left_45Deg_Cycle", t); //Use my function to play back the animation instead
 
 		//reset the animaton when it finishes
 		if (frame == animflen - 1)
