@@ -88,7 +88,7 @@ public:
 		
 
 		//solve for transformation and quaternions
-		if (anim1->keyframes.size() > keyframe  &&  anim2->keyframes.size() > keyframe) //only play the animations if the keyframe var is shorter than it 
+		if (anim1->keyframes.size()-1 > keyframe  &&  anim2->keyframes.size()-1 > keyframe) //only play the animations if the keyframe var is shorter than it 
 		{
 			//// Keyframes ////
 			float kfLow = floor(keyframe);
@@ -98,7 +98,7 @@ public:
 			//// QUATS /////
 			//anim 1 quats
 			quat q1Low = anim1->keyframes[kfLow].quaternion;
-			quat q1Up = anim1->keyframes[kfUp].quaternion;
+			quat q1Up = anim1->keyframes[kfUp].quaternion; //out of bounds issues, added size()-1 to parameters to make it work
 			quat q1mix = slerp(q1Low, q1Up, dec );
 
 			//anim 2 quats
@@ -120,10 +120,12 @@ public:
 			//Get the interpolation between mixed quats and translations
 			quat qmix = slerp(q1mix, q2mix, t);
 			glm::vec3 tmix = mix(t1mix, t2mix, t);
+			if (name == "Humanoid:Hips")
+				tmix = vec3(0, 0, 0);
 
-			//Final shit
-			mat4 M = mat4(qmix);
-			mat4 T = translate(mat4(1), tmix);
+			//Get the actual quaternion and translation matrix
+			mat4 M = mat4(qmix); //Orientation
+			mat4 T = translate(mat4(1), tmix); //Translation
 			M = T * M;
 			if (mat)
 			{

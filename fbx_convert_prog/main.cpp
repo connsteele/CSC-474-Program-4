@@ -442,12 +442,12 @@ public:
 		int animms = 2200; //time in Ms for the animation
 		int anim_step_width_ms = animms / animflen;
 		static int frame = 0;
-		if (totaltime_untilframe_ms >= anim_step_width_ms)
+		if (totaltime_untilframe_ms >= anim_step_width_ms)  // loop the animation
 			{
 				totaltime_untilframe_ms = 0;
 				frame++;
 			}
-		float t = 0;
+		float t = 1;
 		//root->play_animation(frame, "Clip_Walk_Cycle", t);	//name of anmiation from the .fbx file, shown in console. Play the first animation that is loaded in the bones
 		//root->play_animation(frame, "Clip_Run_Left_45Deg_Cycle", t);  //play anim2 that is loaded in the bones
 		root->myplayanim(frame, "Clip_Walk_Cycle", "Clip_Run_Left_45Deg_Cycle", t); //Use my function to play back the animation instead
