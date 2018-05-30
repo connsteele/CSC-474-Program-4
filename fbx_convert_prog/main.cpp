@@ -263,7 +263,7 @@ public:
 	/*Note that any gl calls must always happen after a GL state is initialized */
 	bone *root = NULL;
 	int size_stick = 0;
-	all_animations all_animation;
+	all_animations all_animations;
 	void initGeom(const std::string& resourceDirectory)
 	{
 
@@ -273,8 +273,8 @@ public:
 			animmat[ii] = mat4(1);
 		
 		//readtobone("test.fbx",&all_animation,&root); //select what animation file to load
-		readtobone("HERO_WALK.fbx", &all_animation, &root); //select what animation file to load
-		root->set_animations(&all_animation,animmat,animmatsize);
+		readtobone("walk.fbx", "CLIP_RUN_LEFT_45DEG_CYCLE.fbx", &all_animations, &root); //select what animation files to load
+		root->set_animations(&all_animations,animmat,animmatsize);
 		
 			
 		// Initialize mesh.
@@ -438,8 +438,8 @@ public:
 
 
 		//animation frame system
-		int animflen = 121; //frame duration of the animation
-		int animms = 5033; //time in Ms for the animation
+		int animflen = 53; //frame duration of the animation
+		int animms = 2200; //time in Ms for the animation
 		int anim_step_width_ms = animms / animflen;
 		static int frame = 0;
 		if (totaltime_untilframe_ms >= anim_step_width_ms)
@@ -447,8 +447,8 @@ public:
 				totaltime_untilframe_ms = 0;
 				frame++;
 			}
-		//root->play_animation(frame,"axisneurontestfile_Avatar00");	//name of current animation	
-		root->play_animation(frame, "Hero_Walk");	//name of anmiation from the .fbx file, shown in console
+		//root->play_animation(frame, "Clip_Walk_Cycle");	//name of anmiation from the .fbx file, shown in console. Play the first animation that is loaded in the bones
+		root->play_animation(frame, "Clip_Run_Left_45Deg_Cycle");  //play anim2 that is loaded in the bones
 
 		//reset the animaton when it finishes
 		if (frame == animflen - 1)

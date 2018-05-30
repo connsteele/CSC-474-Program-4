@@ -722,25 +722,42 @@ void DisplayListCurveKeys(FbxAnimCurve* pCurve, FbxProperty* pProperty)
 * and prints its contents in an xml format to stdout.
 */
 
-int readtobone(string file, all_animations *all_animation,bone **proot)
+int readtobone(string file, string file2, all_animations *all_animation, bone **proot)
 {
-
+	// ANIM 1//
 	//ifstream fileHandle("fgdfg");
 	string name_of_file;
 	cout << endl << "filename:" << endl;
 	name_of_file = file;
 	const char* lFilename = name_of_file.c_str();
-	FILE *checkfile=fopen(lFilename,"rb");
+	FILE *checkfile = fopen(lFilename, "rb");
 	if (!checkfile)
-		{
+	{
 		cout << endl << "file not found!" << endl;
 		return 0;
-		}
+	}
 	else
 		cout << endl << "file exists!" << endl;
 	fclose(checkfile);
-	
 
+	//ANIM 2//
+	string name_of_file2;
+	cout << endl << "filename:" << endl;
+	name_of_file2 = file2;
+	const char* lFilename2 = name_of_file2.c_str();
+	FILE *checkfile2 = fopen(lFilename2, "rb");
+	if (!checkfile2)
+	{
+		cout << endl << "file not found!" << endl;
+		return 0;
+	}
+	else
+		cout << endl << "file exists!" << endl;
+	fclose(checkfile2);
+
+
+
+	// ANIM 1//
 	// Initialize the SDK manager. This object handles all our memory management.
 	FbxManager* lSdkManager = FbxManager::Create();
 
@@ -769,8 +786,8 @@ int readtobone(string file, all_animations *all_animation,bone **proot)
 	lImporter->Destroy();
 
 	string create_file_path;
-	
-	
+
+
 	///////////////////
 	///	Model (Skeleton)
 	/////////////////
@@ -778,28 +795,88 @@ int readtobone(string file, all_animations *all_animation,bone **proot)
 	// Note that we are not printing the root node because it should
 	// not contain any attributes.
 	FbxNode* lRootNode = lScene->GetRootNode();
-	int count_bones=0;
+	int count_bones = 0;
 	int child_count = lRootNode->GetChildCount();
 	for (int i = 0; i < child_count; i++)//nur einen knochen machen
-		CountBones(lRootNode->GetChild(i),count_bones);
+		CountBones(lRootNode->GetChild(i), count_bones);
 
 	cout << endl;
 	cout << "Skeleton" << endl;
 	cout << endl;
 	cout << "count bones: " << count_bones << endl;
-	
-	
-		bone *root = new bone;
-		*proot = root;
 
-	if (lRootNode) 	
+
+	bone *root = new bone;
+	*proot = root;
+
+	if (lRootNode)
 	{
 		int anz = lRootNode->GetChildCount();
 		for (int i = 0; i < lRootNode->GetChildCount(); i++)//nur einen knochen machen
-			{
-			PrintNode(root,lRootNode->GetChild(i), -1);
-			}			
+		{
+			PrintNode(root, lRootNode->GetChild(i), -1);
+		}
 	}
+
+	//ANIM 2//
+	FbxManager* lSdkManager2 = FbxManager::Create();
+
+	// Create the IO settings object.
+	FbxIOSettings *ios2 = FbxIOSettings::Create(lSdkManager2, IOSROOT);
+	lSdkManager2->SetIOSettings(ios2);
+
+	// Create an importer using the SDK manager.
+	FbxImporter* lImporter2 = FbxImporter::Create(lSdkManager2, "");
+
+	// Use the first argument as the filename for the importer.
+	if (!lImporter2->Initialize(lFilename2, -1, lSdkManager2->GetIOSettings())) {
+		printf("Call to FbxImporter::Initialize() failed.\n");
+		printf("Error returned: %s\n\n", lImporter2->GetStatus().GetErrorString());
+		FbxString error = lImporter2->GetStatus().GetErrorString();
+		exit(-1);
+	}
+
+	// Create a new scene so that it can be populated by the imported file.
+	FbxScene* lScene2 = FbxScene::Create(lSdkManager2, "myScene");
+
+	// Import the contents of the file into the scene.
+	lImporter2->Import(lScene2);
+
+	// The file is imported; so get rid of the importer.
+	lImporter2->Destroy();
+
+
+	///////////////////
+	///	Model (Skeleton)
+	/////////////////
+	// Print the nodes of the scene and their attributes recursively.
+	// Note that we are not printing the root node because it should
+	// not contain any attributes.
+	FbxNode* lRootNode2 = lScene2->GetRootNode();
+	int count_bones2 = 0;
+	int child_count2 = lRootNode2->GetChildCount();
+	for (int i = 0; i < child_count2; i++)//nur einen knochen machen
+		CountBones(lRootNode2->GetChild(i), count_bones2);
+
+	cout << endl;
+	cout << "Skeleton" << endl;
+	cout << endl;
+	cout << "count bones: " << count_bones << endl;
+
+
+	/*bone *root = new bone; //reuse the same root
+	*proot = root;*/
+
+	if (lRootNode2)
+	{
+		int anz2 = lRootNode2->GetChildCount();
+		for (int i = 0; i < lRootNode2->GetChildCount(); i++)//nur einen knochen machen
+		{
+			PrintNode(root, lRootNode2->GetChild(i), -1);
+		}
+	}
+
+
 
 	cout << "----------------------------------------------------------------------------------------------------" << endl;
 	///////////////////
@@ -810,16 +887,16 @@ int readtobone(string file, all_animations *all_animation,bone **proot)
 
 	//cout << endl;
 	//cout << "Animation" << endl;	
-	PrintAnimationData(all_animation,lScene);
+	PrintAnimationData(all_animation, lScene); //print anim 1
+	PrintAnimationData(all_animation, lScene2); //print anim 2
 
 	/////////////////////
 	/////	End
 	///////////////////
 	//// Destroy the SDK manager and all the other objects it was handling.
 	lSdkManager->Destroy();
+	lSdkManager2->Destroy();
 	//system("pause");
+
 	return 0;
 }
-
-
-

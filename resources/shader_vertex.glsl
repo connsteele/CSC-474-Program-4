@@ -22,9 +22,9 @@ void main() //Skeleton Vert Shader
     pos.y = Ma[3][1];
     pos.z = Ma[3][2];
 
-	//swap the y and z planes so the skeleton walks on the proper plane
-	float temp = pos.y;
-	pos.y = pos.z;
+	//swap the x and z so it walks sideways
+	float temp = pos.x;
+	pos.x = pos.z;
 	pos.z = temp;
 
 	gl_Position = P * V * M * pos;

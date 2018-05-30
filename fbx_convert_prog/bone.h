@@ -42,7 +42,7 @@ public:
 	unsigned int index;			//a unique number for each bone, at the same time index of the animatiom matrix array
 	mat4 *mat = NULL;			//address of one lement from the animation matrix array
 	// searches for the animation and sets the animation matrix element to the recent matrix gained from the keyframe
-	void play_animation(int keyframenumber, string animationname)
+	void play_animation(int keyframenumber, string animationname) //This method plays one anim, make it play 2
 		{
 		for (int i = 0; i < animation.size(); i++)
 			if (animation[i]->name == animationname)
@@ -99,4 +99,4 @@ public:
 		}
 
 };
-int readtobone(string file,all_animations *all_animation, bone **proot);
+int readtobone(string file, string file2, all_animations *all_animation, bone **proot);
