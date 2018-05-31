@@ -69,6 +69,7 @@ public:
 		for (int i = 0; i < kids.size(); i++)
 			kids[i]->play_animation(keyframenumber,animationname, t);
 		}
+
 	void myplayanim(float keyframe, string animationname1, string animationname2, float t)
 	{
 		animation_per_bone *anim1;
@@ -80,7 +81,7 @@ public:
 			{
 				anim1 = animation[i];
 			}
-			if (animation[i]->name == animationname1)
+			if (animation[i]->name == animationname2)
 			{
 				anim2 = animation[i];
 			}
@@ -109,16 +110,16 @@ public:
 			//// Translation ////
 			glm::vec3 t1Low = anim1->keyframes[kfLow].translation;
 			glm::vec3 t1Up = anim1->keyframes[kfUp].translation;
-			glm::vec3 t1mix = mix(t1Low, t1Up, dec);
-			//glm::vec3 t1mix = (t1Low * dec) + (t1Up * dec);
+			glm::vec3 t1mix = mix(t1Low, t1Up, dec);  //mix is a linear interpolation function
+			//glm::vec3 t1mix = ((1-dec) * t1Low) + (t1Up * dec);  // test manual linear interpolation
 
 			glm::vec3 t2Low = anim2->keyframes[kfLow].translation;
 			glm::vec3 t2Up = anim2->keyframes[kfUp].translation;
 			glm::vec3 t2mix = mix(t2Low, t2Up, dec);
-			//glm::vec3 t2mix = (t2Low * dec) + (t2Up * dec);
+			//glm::vec3 t2mix = ((1 - dec) * t2Low) + (t2Up * dec);
 			
 			//Get the interpolation between mixed quats and translations
-			quat qmix = slerp(q1mix, q2mix, t);
+			quat qmix = normalize(slerp(q1mix, q2mix, t));
 			glm::vec3 tmix = mix(t1mix, t2mix, t);
 			if (name == "Humanoid:Hips")
 				tmix = vec3(0, 0, 0);

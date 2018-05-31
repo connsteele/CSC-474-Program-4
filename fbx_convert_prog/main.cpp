@@ -21,6 +21,8 @@ shared_ptr<Shape> shape;
 shared_ptr<Shape> plane;
 mat4 linint_between_two_orientations(vec3 ez_aka_lookto_1, vec3 ey_aka_up_1, vec3 ez_aka_lookto_2, vec3 ey_aka_up_2, float t);
 
+static float gt = 0.0; //global t 
+static int srun = 0; // 0 off 1 on
 
 //*************************************************************************************************
 //
@@ -211,6 +213,22 @@ public:
 		if (key == GLFW_KEY_D && action == GLFW_RELEASE)
 		{
 			mycam.d = 0;
+		}
+		if (key == GLFW_KEY_T && action == GLFW_PRESS)
+		{
+			/*if (gt <= 1)
+				gt += 0.25;
+			if (gt > 1)
+				gt = 0;
+			cout << "gt is : " << gt << endl;*/
+			if (srun == 0)
+			{
+				srun = 1;
+			}
+			else
+			{
+				srun = 0;
+			}
 		}
 	
 		
@@ -447,11 +465,20 @@ public:
 				totaltime_untilframe_ms = 0;
 				frame++;
 			}
-		float t = 1;
+		//float t = 1;
 		//root->play_animation(frame, "Clip_Walk_Cycle", t);	//name of anmiation from the .fbx file, shown in console. Play the first animation that is loaded in the bones
 		//root->play_animation(frame, "Clip_Run_Left_45Deg_Cycle", t);  //play anim2 that is loaded in the bones
-		root->myplayanim(frame, "Clip_Walk_Cycle", "Clip_Run_Left_45Deg_Cycle", t); //Use my function to play back the animation instead
+		root->myplayanim(frame, "Clip_Walk_Cycle", "Clip_Run_Left_45Deg_Cycle", gt); //Use my function to play back the animation instead
 
+		//alignment
+		if (srun && gt < 1)
+		{
+			gt += 0.01; //
+		}
+		else if (!srun  && gt > 0)
+		{
+			gt -= 0.01; //
+		}
 		//reset the animaton when it finishes
 		if (frame == animflen - 1)
 		{

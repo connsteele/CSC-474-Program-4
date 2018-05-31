@@ -3,77 +3,31 @@
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(48): warning C4018: '<': signed/unsigned mismatch
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(51): warning C4018: '>': signed/unsigned mismatch
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(69): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(77): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(100): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(78): warning C4018: '<': signed/unsigned mismatch
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(101): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(105): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(102): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(106): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(110): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(107): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(111): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(115): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(112): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(116): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(141): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(184): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(190): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(197): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(33): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(54): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(117): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(142): warning C4018: '<': signed/unsigned mismatch
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(185): warning C4018: '<': signed/unsigned mismatch
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(191): warning C4018: '<': signed/unsigned mismatch
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(198): warning C4018: '<': signed/unsigned mismatch
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(35): warning C4305: '+=': truncation from 'double' to 'float'
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(55): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(124): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(128): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(132): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(56): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(57): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(126): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(130): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(134): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(325): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(136): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(343): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(453): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(485): warning C4305: 'initializing': truncation from 'double' to 'float'
-  fbx_convert.cpp
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(48): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(51): warning C4018: '>': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(69): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(77): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(100): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(101): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(105): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(106): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(110): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(111): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(115): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(116): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(141): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(184): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(190): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\bone.h(197): warning C4018: '<': signed/unsigned mismatch
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(91): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(92): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(93): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(106): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(107): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(108): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(110): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(111): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(112): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(113): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(173): warning C4244: 'initializing': conversion from 'fbxsdk::FbxLongLong' to 'int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(193): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(194): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(195): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(202): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(203): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(204): warning C4244: '=': conversion from 'fbxsdk::FbxDouble' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(208): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(209): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(210): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(211): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(216): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(217): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(218): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(274): warning C4244: 'initializing': conversion from 'fbxsdk::FbxLongLong' to 'int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(253): warning C4101: 'i': unreferenced local variable
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(733): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\fbx_convert.cpp(748): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-  Generating Code...
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(471): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(476): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(480): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(512): warning C4305: 'initializing': truncation from 'double' to 'float'
   fbx_convert_prog.vcxproj -> C:\Users\gosus\Desktop\School\_CSC474\_programs\_program4\Debug\convertFromFBX.exe
