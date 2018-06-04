@@ -1,3 +1,0 @@
--) If there are glfw issues with fbx_convert_prog use the NuGet package installer under tools in visual studio to install glfw.
-	-) if it is already installed and there are NuGet errors try uninstalling GLFW then reinstalling it using Nuget
--) Run as x86

@@ -22,6 +22,7 @@ shared_ptr<Shape> plane;
 mat4 linint_between_two_orientations(vec3 ez_aka_lookto_1, vec3 ey_aka_up_1, vec3 ez_aka_lookto_2, vec3 ey_aka_up_2, float t);
 
 static float gt = 0.0; //global t 
+static float slo = 30; //make it run in slo mo by changing dis
 static int srun = 0; // 0 off 1 on
 
 //*************************************************************************************************
@@ -216,11 +217,6 @@ public:
 		}
 		if (key == GLFW_KEY_T && action == GLFW_PRESS)
 		{
-			/*if (gt <= 1)
-				gt += 0.25;
-			if (gt > 1)
-				gt = 0;
-			cout << "gt is : " << gt << endl;*/
 			if (srun == 0)
 			{
 				srun = 1;
@@ -228,6 +224,17 @@ public:
 			else
 			{
 				srun = 0;
+			}
+		}
+		if (key == GLFW_KEY_L && action == GLFW_PRESS)
+		{
+			if (slo == 30)
+			{
+				slo = 10;
+			}
+			else if (slo == 10)
+			{
+				slo = 30;
 			}
 		}
 	
@@ -291,7 +298,7 @@ public:
 			animmat[ii] = mat4(1);
 		
 		//readtobone("test.fbx",&all_animation,&root); //select what animation file to load
-		readtobone("walk.fbx", "CLIP_RUN_LEFT_45DEG_CYCLE.fbx", &all_animations, &root); //select what animation files to load
+		readtobone("walk.fbx", "run.fbx", &all_animations, &root); //select what animation files to load
 		root->set_animations(&all_animations,animmat,animmatsize);
 		
 			
@@ -456,34 +463,39 @@ public:
 
 
 		//animation frame system
-		int animflen = 53; //frame duration of the animation
-		int animms = 2200; //time in Ms for the animation
+		//int animflen = 53; //frame duration of the animation
+		//int animms = 2200; //time in Ms for the animation
+		int animflen = root->getFrameCount(root->animation[0]->name); //get current anim frame length 
+		int animms = root->getMS(root->animation[0]->name); //get current animation frame length
 		int anim_step_width_ms = animms / animflen;
-		static int frame = 0;
-		if (totaltime_untilframe_ms >= anim_step_width_ms)  // loop the animation
-			{
-				totaltime_untilframe_ms = 0;
-				frame++;
-			}
+		static float frame = 0;
+		
+		frame += frametime * slo;
+		//cout << frametime << endl;
+
+
+		if (frame >= animflen - 1) 
+		{ //reset the animation
+			frame = 0;
+		}
 		//float t = 1;
 		//root->play_animation(frame, "Clip_Walk_Cycle", t);	//name of anmiation from the .fbx file, shown in console. Play the first animation that is loaded in the bones
 		//root->play_animation(frame, "Clip_Run_Left_45Deg_Cycle", t);  //play anim2 that is loaded in the bones
-		root->myplayanim(frame, "Clip_Walk_Cycle", "Clip_Run_Left_45Deg_Cycle", gt); //Use my function to play back the animation instead
+		
+		//cout << "frame is :" << frame << endl;
+		//cout << "gt is :" << gt << endl;
+		root->myplayanim(frame, "Clip_Walk_Cycle", "Clip_Run_Cycle", gt); //Use my function to play back the animation instead
 
 		//alignment
 		if (srun && gt < 1)
 		{
-			gt += 0.01; //
+			//gt += 0.01; //
+			gt += frametime;
 		}
 		else if (!srun  && gt > 0)
 		{
-			gt -= 0.01; //
-		}
-		//reset the animaton when it finishes
-		if (frame == animflen - 1)
-		{
-			totaltime_untilframe_ms = 0;
-			frame = 0;
+			//gt -= 0.01; //
+			gt -= frametime;
 		}
 
 

@@ -87,14 +87,20 @@ public:
 			}
 		}
 		
+		float ratio = 1. * anim2->keyframes.size() / anim1->keyframes.size(); //ratio between keyframes
 
 		//solve for transformation and quaternions
-		if (anim1->keyframes.size()-1 > keyframe  &&  anim2->keyframes.size()-1 > keyframe) //only play the animations if the keyframe var is shorter than it 
+		if (anim1->keyframes.size()-1 > keyframe ) //only play the animations if the keyframe var is shorter than it 
 		{
 			//// Keyframes ////
 			float kfLow = floor(keyframe);
 			float kfUp = kfLow + 1;
 			float dec = keyframe - kfLow; //what percent of each animation to use
+
+			/*if (  ) //reset
+			{
+
+			}*/
 
 			//// QUATS /////
 			//anim 1 quats
@@ -102,10 +108,15 @@ public:
 			quat q1Up = anim1->keyframes[kfUp].quaternion; //out of bounds issues, added size()-1 to parameters to make it work
 			quat q1mix = slerp(q1Low, q1Up, dec );
 
+			float newKflow = ratio * kfLow;
+			float newKfUp = newKflow + 1;
+
+			float newDec = (ratio * keyframe) - newKflow;
+
 			//anim 2 quats
-			quat q2Low = anim2->keyframes[kfLow].quaternion;
-			quat q2Up = anim2->keyframes[kfUp].quaternion;
-			quat q2mix = slerp(q2Low, q2Up, dec);
+			quat q2Low = anim2->keyframes[newKflow].quaternion;
+			quat q2Up = anim2->keyframes[newKfUp].quaternion;
+			quat q2mix = slerp(q2Low, q2Up, newDec);
 
 			//// Translation ////
 			glm::vec3 t1Low = anim1->keyframes[kfLow].translation;
@@ -113,9 +124,9 @@ public:
 			glm::vec3 t1mix = mix(t1Low, t1Up, dec);  //mix is a linear interpolation function
 			//glm::vec3 t1mix = ((1-dec) * t1Low) + (t1Up * dec);  // test manual linear interpolation
 
-			glm::vec3 t2Low = anim2->keyframes[kfLow].translation;
-			glm::vec3 t2Up = anim2->keyframes[kfUp].translation;
-			glm::vec3 t2mix = mix(t2Low, t2Up, dec);
+			glm::vec3 t2Low = anim2->keyframes[newKflow].translation;
+			glm::vec3 t2Up = anim2->keyframes[newKfUp].translation;
+			glm::vec3 t2mix = mix(t2Low, t2Up, newDec);
 			//glm::vec3 t2mix = ((1 - dec) * t2Low) + (t2Up * dec);
 			
 			//Get the interpolation between mixed quats and translations
@@ -198,6 +209,32 @@ public:
 		for (int i = 0; i < kids.size(); i++)
 			kids[i]->set_animations(all_anim, matrices, animsize);
 		}
+
+	int getFrameCount(std::string animationName) //get the duration of the animation in Frames
+	{
+		for (auto anim : animation) 
+		{
+			if (anim->name == animationName) 
+			{
+				return anim->frames;
+			}
+		}
+
+		return 1;
+	}
+
+	long long getMS(std::string animationName) //get the animation duration in MS
+	{
+		for (auto anim : animation) 
+		{
+			if (anim->name == animationName) 
+			{
+				return anim->duration;
+			}
+		}
+
+		return 0;
+	}
 
 };
 int readtobone(string file, string file2, all_animations *all_animation , bone **proot);

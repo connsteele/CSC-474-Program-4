@@ -24,7 +24,7 @@ void main() //Skeleton Vert Shader
 
 	//swap the x and z so it walks sideways
 	float temp = pos.x;
-	pos.x = pos.z;
+	pos.x = -pos.z;
 	pos.z = temp;
 
 	gl_Position = P * V * M * pos;
