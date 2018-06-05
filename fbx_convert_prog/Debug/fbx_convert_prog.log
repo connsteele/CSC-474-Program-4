@@ -25,11 +25,11 @@ c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(131): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(135): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(137): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(350): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(353): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(469): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(473): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(493): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(498): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
-c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(524): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(472): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(476): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(496): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(501): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+c:\users\gosus\desktop\school\_csc474\_programs\_program4\fbx_convert_prog\main.cpp(527): warning C4305: 'initializing': truncation from 'double' to 'float'
   fbx_convert_prog.vcxproj -> C:\Users\gosus\Desktop\School\_CSC474\_programs\_program4\Debug\convertFromFBX.exe

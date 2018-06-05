@@ -228,13 +228,16 @@ public:
 		}
 		if (key == GLFW_KEY_L && action == GLFW_PRESS)
 		{
-			if (slo == 30)
+			if (slo < 100)
 			{
-				slo = 10;
+				slo += 10;
 			}
-			else if (slo == 10)
+		}
+		if (key == GLFW_KEY_K && action == GLFW_PRESS)
+		{
+			if (slo > 10)
 			{
-				slo = 30;
+				slo -= 10;
 			}
 		}
 	
